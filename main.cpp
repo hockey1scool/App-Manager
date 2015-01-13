@@ -97,15 +97,15 @@ void run(){
 
             memset(&ExecuteInfo, 0, sizeof(ExecuteInfo));
 
-            ExecuteInfo.cbSize = sizeof(ExecuteInfo);
-            ExecuteInfo.fMask  = 0;
-            ExecuteInfo.hwnd      = 0;
-            ExecuteInfo.lpVerb    ="open";
-            ExecuteInfo.lpFile    ="C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe","open";
-            ExecuteInfo.lpParameters =NULL;
-            ExecuteInfo.lpDirectory   = 0;
-            ExecuteInfo.nShow         = SW_SHOW;
-            ExecuteInfo.hInstApp      = 0;
+            ExecuteInfo.cbSize          = sizeof(ExecuteInfo);
+            ExecuteInfo.fMask           = 0;
+            ExecuteInfo.hwnd            = 0;
+            ExecuteInfo.lpVerb          = "open";
+            ExecuteInfo.lpFile          = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe","open";
+            ExecuteInfo.lpParameters    = NULL;
+            ExecuteInfo.lpDirectory     = 0;
+            ExecuteInfo.nShow           = SW_SHOW;
+            ExecuteInfo.hInstApp        = 0;
 
             if(ShellExecuteEx(&ExecuteInfo) == FALSE){
                 cout << "not working";
